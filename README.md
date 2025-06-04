@@ -7,7 +7,16 @@ REST API для создания коротких ссылок с поддерж
 ```bash
 git clone https://github.com/mycuuuk/yadro_test.git
 
+cd yadro_test
 pip install -r requirements.txt
+sudo mysql
+### Внутри mysql
+CREATE DATABASE shortener_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'yadro'@'localhost' IDENTIFIED BY 'test';
+GRANT ALL PRIVILEGES ON shortener_db.* TO 'yadro'@'localhost';
+FLUSH PRIVILEGES;
+exit
+###
 
 python manage.py makemigrations
 python manage.py migrate
