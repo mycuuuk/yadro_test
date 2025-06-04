@@ -6,7 +6,6 @@ REST API для создания коротких ссылок с поддерж
 
 ```bash
 git clone https://github.com/mycuuuk/yadro_test.git
-cd yadro_test
 
 pip install -r requirements.txt
 
